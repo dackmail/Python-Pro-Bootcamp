@@ -35,16 +35,20 @@ print('''input you choice:
  3 - scissors
  ''')
 user_do = int(input())
-user_do -= 1
-print('You choice is:')
-print(RPS_list[user_do])
-print('Computer choice is:')
-print(RPS_list[computer_do])
-if (user_do - computer_do) == -2 or (user_do - computer_do) == 1:
-  print('You win')
-elif user_do == computer_do:
-  print('Nobody win')
+if 0 <= user_do <= 3:
+  user_do -= 1
+  print('You choice is:')
+  print(RPS_list[user_do])
+  print('Computer choice is:')
+  print(RPS_list[computer_do])
+  if (user_do - computer_do) == -2 or (user_do - computer_do) == 1:
+    print('You win')
+  elif user_do == computer_do:
+    print('Nobody win')
+  else:
+    print('Computer win')
 else:
+  print('You take invalid number')
   print('Computer win')
 
 
